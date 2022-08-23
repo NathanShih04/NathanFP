@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Title",
-            "content": "System.out.println(&quot;Hello World&quot;); . Hello World .",
+            "content": "import java.util.Random; int flipCount = 10; . Random rando = new Random(); public void coinFlip(int count){ for(int i = 0; i &lt; count; i++){ int side = rando.nextInt(2); if(side == 1){ System.out.println(&quot;Heads&quot;); } else{ System.out.println(&quot;Tails&quot;); } } } . coinFlip(flipCount); . Tails Heads Tails Heads Heads Tails Tails Tails Heads Tails .",
             "url": "https://nathanshih04.github.io/NathanFP/2022/08/21/nathan-java.html",
             "relUrl": "/2022/08/21/nathan-java.html",
             "date": " • Aug 21, 2022"
