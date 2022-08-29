@@ -2,6 +2,17 @@
   
     
         "post0": {
+            "title": "College Board Info",
+            "content": "Unit 1: Primitive Types . Primitive Type NB .",
+            "url": "https://nathanshih04.github.io/NathanFP/2022/08/28/nathan-CollegeBoard.html",
+            "relUrl": "/2022/08/28/nathan-CollegeBoard.html",
+            "date": " • Aug 28, 2022"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "Bash Stuff",
             "content": "realpath . jupyter kernelspec list python --version conda --version . /home/nathanshih04/NathanFP/_notebooks Available kernels: bash /home/nathanshih04/.local/share/jupyter/kernels/bash java /home/nathanshih04/.local/share/jupyter/kernels/java javascript /home/nathanshih04/.local/share/jupyter/kernels/javascript python3 /home/nathanshih04/.local/share/jupyter/kernels/python3 bash: /home/nathanshih04/vscode/bash.sh: No such file or directory Python 3.9.12 conda 4.13.0 .",
             "url": "https://nathanshih04.github.io/NathanFP/jupyter/2022/08/25/nathan-pythonBash.html",
@@ -12,9 +23,9 @@
     
   
     
-        ,"post1": {
+        ,"post2": {
             "title": "Java Primitive Guesser Game",
-            "content": "import java.util.Scanner; import java.util.Random; boolean check = false; Random rand = new Random(); // Random Number to 100 int answer = rand.nextInt(100); . // Function that checks whether or not the guess was correct public boolean checker(int guess, int ans){ if(guess == ans){ check = true; } return check; } . Scanner scan = new Scanner(System.in); System.out.println(&quot;Input your guess: &quot;); int inp = Integer.parseInt(scan.nextLine()); boolean output = checker(inp, answer); while(output == false){ if(inp &lt; answer){ System.out.println(&quot;Wrong, guess higher silly goose!&quot;); } if(inp &gt; answer){ System.out.println(&quot;Wrong, guess lower silly goose!&quot;); } Scanner scan = new Scanner(System.in); System.out.println(&quot;Input your guess again: &quot;); inp = Integer.parseInt(scan.nextLine()); output = checker(inp, answer); } System.out.println(&quot;You got it right! The answer was: &quot; + answer); . Input your guess: Wrong, guess higher silly goose! Input your guess again: Wrong, guess lower silly goose! Input your guess again: Wrong, guess higher silly goose! Input your guess again: Wrong, guess lower silly goose! Input your guess again: Wrong, guess lower silly goose! Input your guess again: Wrong, guess higher silly goose! Input your guess again: Wrong, guess higher silly goose! Input your guess again: You got it right! The answer was: 49 .",
+            "content": "import java.util.Scanner; import java.util.Random; . public class Guesser{ public Guesser(){ this.playGame(); } // Random Number to 100 int answer = rand.nextInt(100); boolean check = false; Random rand = new Random(); public static void main(String[] args){ Guesser guessGame = new Guesser(); } // Function that checks whether or not the guess was correct public boolean checker(int guess, int ans){ if(guess == ans){ check = true; } return check; } public void playGame(){ Scanner scan = new Scanner(System.in); System.out.println(&quot;Input your guess: &quot;); int inp = Integer.parseInt(scan.nextLine()); boolean output = checker(inp, answer); while(output == false){ if(inp &lt; answer){ System.out.println(&quot;Wrong, guess higher silly goose!&quot;); } if(inp &gt; answer){ System.out.println(&quot;Wrong, guess lower silly goose!&quot;); } System.out.println(&quot;Input your guess again: &quot;); inp = Integer.parseInt(scan.nextLine()); output = checker(inp, answer); } System.out.println(&quot;You got it right! The answer was: &quot; + answer); } } Guesser.main(null); . Input your guess: Wrong, guess higher silly goose! Input your guess again: Wrong, guess higher silly goose! Input your guess again: Wrong, guess higher silly goose! Input your guess again: Wrong, guess lower silly goose! Input your guess again: Wrong, guess higher silly goose! Input your guess again: Wrong, guess higher silly goose! Input your guess again: Wrong, guess lower silly goose! Input your guess again: Wrong, guess lower silly goose! Input your guess again: You got it right! The answer was: 92 .",
             "url": "https://nathanshih04.github.io/NathanFP/2022/08/24/nathan-javaPrim.html",
             "relUrl": "/2022/08/24/nathan-javaPrim.html",
             "date": " • Aug 24, 2022"
@@ -23,22 +34,11 @@
     
   
     
-        ,"post2": {
+        ,"post3": {
             "title": "Python Notebook",
             "content": "print(&#39;hello world&#39;) . hello world .",
             "url": "https://nathanshih04.github.io/NathanFP/2022/08/22/nathan-python.html",
             "relUrl": "/2022/08/22/nathan-python.html",
-            "date": " • Aug 22, 2022"
-        }
-        
-    
-  
-    
-        ,"post3": {
-            "title": "Hi this is Nathan's first post",
-            "content": "",
-            "url": "https://nathanshih04.github.io/NathanFP/2022/08/22/nathan-post.html",
-            "relUrl": "/2022/08/22/nathan-post.html",
             "date": " • Aug 22, 2022"
         }
         

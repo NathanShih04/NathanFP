@@ -134,10 +134,6 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
-<span class="kt">boolean</span> <span class="n">check</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="n">Random</span> <span class="n">rand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
-<span class="c1">// Random Number to 100</span>
-<span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -154,48 +150,56 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// Function that checks whether or not the guess was correct</span>
-<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checker</span><span class="p">(</span><span class="kt">int</span> <span class="n">guess</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ans</span><span class="p">){</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">guess</span> <span class="o">==</span> <span class="n">ans</span><span class="p">){</span>
-        <span class="n">check</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Guesser</span><span class="p">{</span>
+
+    <span class="kd">public</span> <span class="nf">Guesser</span><span class="p">(){</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="na">playGame</span><span class="p">();</span>
+
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">check</span><span class="p">;</span>
+
+    <span class="c1">// Random Number to 100</span>
+    <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+    <span class="kt">boolean</span> <span class="n">check</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="n">Random</span> <span class="n">rand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+
+        <span class="n">Guesser</span> <span class="n">guessGame</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Guesser</span><span class="p">();</span>
+
+    <span class="p">}</span>
+
+    <span class="c1">// Function that checks whether or not the guess was correct</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checker</span><span class="p">(</span><span class="kt">int</span> <span class="n">guess</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ans</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">guess</span> <span class="o">==</span> <span class="n">ans</span><span class="p">){</span>
+            <span class="n">check</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">check</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">playGame</span><span class="p">(){</span>
+        <span class="n">Scanner</span> <span class="n">scan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input your guess: &quot;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">inp</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
+        <span class="kt">boolean</span> <span class="n">output</span> <span class="o">=</span> <span class="n">checker</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">answer</span><span class="p">);</span>
+    
+        <span class="k">while</span><span class="p">(</span><span class="n">output</span> <span class="o">==</span> <span class="kc">false</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">inp</span> <span class="o">&lt;</span> <span class="n">answer</span><span class="p">){</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Wrong, guess higher silly goose!&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">inp</span> <span class="o">&gt;</span> <span class="n">answer</span><span class="p">){</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Wrong, guess lower silly goose!&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input your guess again: &quot;</span><span class="p">);</span>
+            <span class="n">inp</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">checker</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">answer</span><span class="p">);</span>
+        <span class="p">}</span>
+    
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You got it right! The answer was: &quot;</span> <span class="o">+</span> <span class="n">answer</span><span class="p">);</span>
+    <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">Scanner</span> <span class="n">scan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input your guess: &quot;</span><span class="p">);</span>
-<span class="kt">int</span> <span class="n">inp</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
-<span class="kt">boolean</span> <span class="n">output</span> <span class="o">=</span> <span class="n">checker</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">answer</span><span class="p">);</span>
-
-<span class="k">while</span><span class="p">(</span><span class="n">output</span> <span class="o">==</span> <span class="kc">false</span><span class="p">){</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">inp</span> <span class="o">&lt;</span> <span class="n">answer</span><span class="p">){</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Wrong, guess higher silly goose!&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">inp</span> <span class="o">&gt;</span> <span class="n">answer</span><span class="p">){</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Wrong, guess lower silly goose!&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="n">Scanner</span> <span class="n">scan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input your guess again: &quot;</span><span class="p">);</span>
-    <span class="n">inp</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
-    <span class="n">output</span> <span class="o">=</span> <span class="n">checker</span><span class="p">(</span><span class="n">inp</span><span class="p">,</span> <span class="n">answer</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You got it right! The answer was: &quot;</span> <span class="o">+</span> <span class="n">answer</span><span class="p">);</span>
+<span class="n">Guesser</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -211,7 +215,13 @@ window.onload = wrap_img;
 <pre>Input your guess: 
 Wrong, guess higher silly goose!
 Input your guess again: 
+Wrong, guess higher silly goose!
+Input your guess again: 
+Wrong, guess higher silly goose!
+Input your guess again: 
 Wrong, guess lower silly goose!
+Input your guess again: 
+Wrong, guess higher silly goose!
 Input your guess again: 
 Wrong, guess higher silly goose!
 Input your guess again: 
@@ -219,11 +229,7 @@ Wrong, guess lower silly goose!
 Input your guess again: 
 Wrong, guess lower silly goose!
 Input your guess again: 
-Wrong, guess higher silly goose!
-Input your guess again: 
-Wrong, guess higher silly goose!
-Input your guess again: 
-You got it right! The answer was: 49
+You got it right! The answer was: 92
 </pre>
 </div>
 </div>
