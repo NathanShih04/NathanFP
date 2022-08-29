@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Bash Stuff",
-            "content": "realpath . jupyter kernelspec list python --version conda --version . /home/nathanshih04/NathanFP/_notebooks Available kernels: bash /home/nathanshih04/.local/share/jupyter/kernels/bash java /home/nathanshih04/.local/share/jupyter/kernels/java javascript /home/nathanshih04/.local/share/jupyter/kernels/javascript python3 /home/nathanshih04/.local/share/jupyter/kernels/python3 bash: /home/nathanshih04/vscode/bash.sh: No such file or directory Python 3.9.12 conda 4.13.0 .",
+            "content": "realpath . jupyter kernelspec list python --version conda --version . /home/nathanshih04/NathanFP/_notebooks Available kernels: bash /home/nathanshih04/.local/share/jupyter/kernels/bash java /home/nathanshih04/.local/share/jupyter/kernels/java javascript /home/nathanshih04/.local/share/jupyter/kernels/javascript python3 /home/nathanshih04/.local/share/jupyter/kernels/python3 Python 3.9.12 conda 4.13.0 .",
             "url": "https://nathanshih04.github.io/NathanFP/jupyter/2022/08/25/nathan-pythonBash.html",
             "relUrl": "/jupyter/2022/08/25/nathan-pythonBash.html",
             "date": " • Aug 25, 2022"
