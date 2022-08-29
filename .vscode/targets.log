@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug 28 22:38:26 2022
+# Make data base, printed on Mon Aug 29 10:04:51 2022
 
 # Variables
 
@@ -53,7 +51,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-aa65bed9-8fa1-49cf-bcbe-e5fa082c13ee.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-ab169aa1-2463-494f-931e-d98ecbffc3b2.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -77,7 +75,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 LOGNAME = nathanshih04
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 CONDA_PROMPT_MODIFIER = (base) 
 # environment
@@ -279,9 +277,11 @@ convert: .FORCE
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 29):
 	docker-compose up converter
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 
 .FORCE:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -302,6 +302,6 @@ convert: .FORCE
 # strcache performance: lookups = 73 / hit rate = 35%
 # hash-table stats:
 # Load=47/8192=1%, Rehash=0, Collisions=1/73=1%
-# Finished Make data base on Sun Aug 28 22:38:26 2022
+# Finished Make data base on Mon Aug 29 10:04:51 2022
 
  
