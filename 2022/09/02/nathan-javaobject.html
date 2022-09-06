@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      3 min read
     
 </span></p>
 
@@ -248,6 +248,56 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Turtle</span><span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">weight</span><span class="p">(</span><span class="kt">int</span> <span class="n">weight</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I weigh &quot;</span> <span class="o">+</span> <span class="n">weight</span> <span class="o">+</span> <span class="s">&quot; pounds!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">name</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;My name is &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">RussianTort</span> <span class="kd">extends</span> <span class="n">Turtle</span><span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">terrain</span><span class="p">(){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I live on land!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Menu</span> <span class="p">{</span>
     <span class="c1">// Instance Variables</span>
     <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">DEFAULT</span> <span class="o">=</span> <span class="s">&quot;\u001B[0m&quot;</span><span class="p">;</span>  <span class="c1">// Default Terminal Color</span>
@@ -293,6 +343,7 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 - Number guessing game&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2 - Coinflipper&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3 - Loading in color&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4 - Learn about Shellby&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0 - Quit&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;-------------------------\n&quot;</span><span class="p">);</span>
     <span class="p">}</span>
@@ -326,6 +377,12 @@ window.onload = wrap_img;
                     <span class="p">}</span>
                     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">COLORS</span><span class="o">[</span><span class="n">random</span><span class="o">][</span><span class="n">ANSI</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot;#&quot;</span><span class="p">);</span>
                 <span class="p">}</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="n">RussianTort</span> <span class="n">shellby</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RussianTort</span><span class="p">();</span>
+                <span class="n">shellby</span><span class="p">.</span><span class="na">weight</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                <span class="n">shellby</span><span class="p">.</span><span class="na">name</span><span class="p">(</span><span class="s">&quot;Shellby&quot;</span><span class="p">);</span>
+                <span class="n">shellby</span><span class="p">.</span><span class="na">terrain</span><span class="p">();</span>
                 <span class="k">break</span><span class="p">;</span>
                     
             <span class="k">default</span><span class="p">:</span>
@@ -363,48 +420,25 @@ Choose from these choices
 1 - Number guessing game
 2 - Coinflipper
 3 - Loading in color
+4 - Learn about Shellby
 0 - Quit
 -------------------------
 
-2: Heads
-Tails
-Tails
-Heads
-Heads
-Heads
-Tails
-Heads
-Tails
-Tails
+4: I weigh 1 pounds!
+My name is Shellby!
+I live on land!
 
-1: Input your guess: 
-Wrong, you guessed 1, guess higher silly goose!
-Input your guess again: 
-Wrong, you guessed 5, guess higher silly goose!
-Input your guess again: 
-Wrong, you guessed 7, guess higher silly goose!
-Input your guess again: 
-Wrong, you guessed 55, guess higher silly goose!
-Input your guess again: 
-Wrong, you guessed 55, guess higher silly goose!
-Input your guess again: 
-Wrong, you guessed 66, guess higher silly goose!
-Input your guess again: 
-Wrong, you guessed 77, guess higher silly goose!
-Input your guess again: 
-Wrong, you guessed 88, guess higher silly goose!
-Input your guess again: 
-Wrong, guessed 99, lower silly goose!
-Input your guess again: 
-Wrong, you guessed 90, guess higher silly goose!
-Input your guess again: 
-Wrong, guessed 94, lower silly goose!
-Input your guess again: 
-Wrong, you guessed 9, guess higher silly goose!
-Input your guess again: 
-You got it right! The answer was: 92
-Input your guess: 
-You got it right! The answer was: 92
+4: I weigh 1 pounds!
+My name is Shellby!
+I live on land!
+
+4: I weigh 1 pounds!
+My name is Shellby!
+I live on land!
+
+4: I weigh 1 pounds!
+My name is Shellby!
+I live on land!
 
 0: Goodbye, World!
 </pre>
