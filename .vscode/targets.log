@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Sep  4 15:15:06 2022
+# Make data base, printed on Tue Sep  6 08:48:49 2022
 
 # Variables
 
@@ -51,7 +53,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-4acff8fc-a2ca-4926-97e3-31b39dd2be3b.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-dc5915b4-c40c-4361-a3b3-cd6415382942.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -65,7 +67,7 @@ PWD = /home/nathanshih04/NathanFP
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/2381_interop
+WSL_INTEROP = /run/WSL/11_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -151,9 +153,11 @@ TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu
 # environment
+MOTD_SHOWN = update-motd
+# environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=71/1024=7%, Rehash=0, Collisions=6/96=6%
+# Load=72/1024=7%, Rehash=0, Collisions=6/97=6%
 
 # Pattern-specific Variable Values
 
@@ -275,11 +279,9 @@ convert: .FORCE
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 29):
 	docker-compose up converter
+ 
 
 .FORCE:
- 
-make: *** No rule to make target 'all'.  Stop.
-
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -300,6 +302,6 @@ make: *** No rule to make target 'all'.  Stop.
 # strcache performance: lookups = 73 / hit rate = 35%
 # hash-table stats:
 # Load=47/8192=1%, Rehash=0, Collisions=1/73=1%
-# Finished Make data base on Sun Sep  4 15:15:06 2022
+# Finished Make data base on Tue Sep  6 08:48:49 2022
 
  
