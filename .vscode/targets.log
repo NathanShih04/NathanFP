@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Sep 11 18:27:47 2022
+# Make data base, printed on Sun Sep 11 21:43:10 2022
 
 # Variables
 
@@ -51,7 +53,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-515540bd-38b0-4420-824f-3147c39e931d.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-d96cc459-faa8-42d6-b336-8653f2bfa03e.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -276,10 +278,8 @@ convert: .FORCE
 #  recipe to execute (from 'Makefile', line 29):
 	docker-compose up converter
 
- 
-make: *** No rule to make target 'all'.  Stop.
-
 .FORCE:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -300,6 +300,6 @@ make: *** No rule to make target 'all'.  Stop.
 # strcache performance: lookups = 73 / hit rate = 35%
 # hash-table stats:
 # Load=47/8192=1%, Rehash=0, Collisions=1/73=1%
-# Finished Make data base on Sun Sep 11 18:27:47 2022
+# Finished Make data base on Sun Sep 11 21:43:10 2022
 
  
