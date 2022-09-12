@@ -322,6 +322,18 @@ The lights are off!
 <span class="p">}</span>
 
 
+
+<span class="c1">// third demonstration</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Third Demonstration: &quot;</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="c1">// first way</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">num2</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">));</span>
+<span class="c1">// second way</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num1</span> <span class="o">!=</span> <span class="mi">5</span> <span class="o">||</span> <span class="n">num2</span> <span class="o">==</span> <span class="mi">5</span><span class="p">);</span>
+
+
 <span class="c1">// Weird and confusing</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Overly complicated for no reason:&quot;</span><span class="p">);</span>
 <span class="k">if</span><span class="p">((</span><span class="n">lights</span> <span class="o">||</span> <span class="o">!</span><span class="n">fan</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">sink</span> <span class="o">&amp;&amp;</span> <span class="n">shower</span><span class="p">)){</span>
@@ -344,6 +356,9 @@ Everything is on!
 Second Demonstration:
 Everything is off!
 Everything is off!
+Third Demonstration: 
+true
+true
 Overly complicated for no reason:
 Either lights are on or fan is off, or sink and shower are on.
 </pre>
