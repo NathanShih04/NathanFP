@@ -252,9 +252,11 @@ window.onload = wrap_img;
 
     <span class="c1">// Function that uses if, else if, and else to decide which animal to print out.</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">ifs</span><span class="p">(</span><span class="kt">int</span> <span class="n">choice</span><span class="p">){</span>
+        <span class="c1">// checks if statement first</span>
         <span class="k">if</span><span class="p">(</span><span class="n">choice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ʕ •ᴥ•ʔ&quot;</span><span class="p">);</span>
         <span class="p">}</span>
+        <span class="c1">// runs down if else statement list</span>
         <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">choice</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;εїз&quot;</span><span class="p">);</span>
         <span class="p">}</span>
@@ -267,6 +269,7 @@ window.onload = wrap_img;
         <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">choice</span> <span class="o">==</span> <span class="mi">5</span><span class="p">){</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;くコ:彡&quot;</span><span class="p">);</span>
         <span class="p">}</span>
+        <span class="c1">// runs else block if nothing applies above</span>
         <span class="k">else</span><span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You did not choose an option for an animal :(&quot;</span><span class="p">);</span>
         <span class="p">}</span>
@@ -275,6 +278,7 @@ window.onload = wrap_img;
 
     <span class="c1">// Function that is converted to switch, case, and other to decide which animal to print out.</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">switches</span><span class="p">(</span><span class="kt">int</span> <span class="n">choice</span><span class="p">){</span>
+        <span class="c1">// takes in choice and chooses the case based off of it</span>
         <span class="k">switch</span><span class="p">(</span><span class="n">choice</span><span class="p">){</span>
             <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ʕ •ᴥ•ʔ&quot;</span><span class="p">);</span>
@@ -291,6 +295,7 @@ window.onload = wrap_img;
             <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;くコ:彡&quot;</span><span class="p">);</span>
                 <span class="k">break</span><span class="p">;</span>
+            <span class="c1">// Otherwise case: same as else</span>
             <span class="k">default</span><span class="p">:</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You did not choose an option for an animal :(&quot;</span><span class="p">);</span>
         <span class="p">}</span>

@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -125,6 +125,13 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>if statement runs the code contained inside if the condition inside of the statement is satisfied</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -132,8 +139,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// if statement runs the code contained inside if the condition inside of the statement is satisfied</span>
-
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// set up variable</span>
 <span class="kt">boolean</span> <span class="n">lights</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 
 <span class="c1">// if the lights is set to true, it will print the statement</span>
@@ -169,6 +175,13 @@ The lights are on!
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>if-else statement runs the if statment first, but if that condition is not met, it will run whatever is in the else statement</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -176,8 +189,7 @@ The lights are on!
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// if-else statement runs the if statment first, but if that condition is not met, it will run whatever is in the else statement</span>
-
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// set up variable</span>
 <span class="kt">boolean</span> <span class="n">lights</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 
 <span class="c1">// if the lights is set to true, it will print the statement. Else the lights are off.</span>
@@ -219,6 +231,13 @@ The lights are off!
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>if-elseif-else first checks to see if the if statement condition is met. If not, it will go through all else ifs and check until one of those conditions are met. If neither the if and else if statements are met, it will run the else statement.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -226,16 +245,15 @@ The lights are off!
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// if-elseif-else first checks to see if the if statement condition is met. If not, it will go through all else ifs</span>
-<span class="c1">// and check until one of those conditions are met. If neither the if and else if statements are met, it will run the</span>
-<span class="c1">// else statement.</span>
-
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Setting variables to demonstrate if, else if, and else.</span>
 <span class="kt">boolean</span> <span class="n">lights</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 <span class="kt">boolean</span> <span class="n">fan</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 
+<span class="c1">// First checks if statement </span>
 <span class="k">if</span><span class="p">(</span><span class="n">lights</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">fan</span><span class="p">){</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The lights are on and the fan is off!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
+<span class="c1">// Goes down else ifs</span>
 <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">lights</span> <span class="o">&amp;&amp;</span> <span class="n">fan</span><span class="p">){</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The lights are off and the fan is on!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -245,6 +263,7 @@ The lights are off!
 <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">lights</span> <span class="o">||</span> <span class="o">!</span><span class="n">fan</span><span class="p">){</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Either the lights are off or the fan is off!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
+<span class="c1">// If none of the above run, else block will run</span>
 <span class="k">else</span><span class="p">{</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Both the lights and fan must be on!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -271,6 +290,13 @@ The lights are off!
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>De Morgan's Law shows how we can remove an &amp;&amp; statement or remove an || statement. It's the way of creating equivalent statements by switching the &amp;&amp; or || and distributing the ! sign if you need.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -278,9 +304,7 @@ The lights are off!
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// De Morgan&#39;s Law shows how we can remove an &amp;&amp; statement or remove an || statement</span>
-
-<span class="c1">// First demonstration</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// First demonstration</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;First Demonstration:&quot;</span><span class="p">);</span>
 <span class="kt">boolean</span> <span class="n">lights</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 <span class="kt">boolean</span> <span class="n">fan</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
