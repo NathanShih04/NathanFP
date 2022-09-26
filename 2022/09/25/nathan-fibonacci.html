@@ -125,6 +125,13 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Base Code</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -374,6 +381,7 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;For Loop&quot;</span><span class="p">;</span>
+
         <span class="c1">// Hardcode for the first two numbers</span>
         <span class="kt">int</span> <span class="n">fir</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">sec</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -381,8 +389,9 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
         <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">fir</span><span class="p">);</span>
         <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">sec</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">amount</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
+        
         <span class="c1">// for loop used to make the next term be the sum of the previous two terms.</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">amount</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">amount</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="kt">int</span> <span class="n">holder</span> <span class="o">=</span> <span class="n">sec</span><span class="p">;</span>
             <span class="n">sec</span> <span class="o">=</span> <span class="n">sec</span> <span class="o">+</span> <span class="n">fir</span><span class="p">;</span>
             <span class="n">fir</span> <span class="o">=</span> <span class="n">holder</span><span class="p">;</span>
@@ -419,15 +428,17 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;While Loop&quot;</span><span class="p">;</span>
+
         <span class="c1">// Hardcode for the first two numbers</span>
         <span class="kt">int</span> <span class="n">fir</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">sec</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
         <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">fir</span><span class="p">);</span>
         <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">sec</span><span class="p">);</span>
+
         <span class="kt">int</span> <span class="n">amount</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="c1">// while loop used to make the next term be the sum of teh previous two terms</span>
         <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="c1">// while loop used to make the next term be the sum of teh previous two terms</span>
         <span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">amount</span><span class="p">)</span> <span class="p">{</span>
             <span class="kt">int</span> <span class="n">holder</span> <span class="o">=</span> <span class="n">sec</span><span class="p">;</span>
             <span class="n">sec</span> <span class="o">=</span> <span class="n">sec</span> <span class="o">+</span> <span class="n">fir</span><span class="p">;</span>
@@ -466,6 +477,7 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;Recursion&quot;</span><span class="p">;</span>
+        
         <span class="c1">// Iterating to show the whole sequence</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
             <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">Recursively</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
