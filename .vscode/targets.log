@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Sep 25 15:55:47 2022
+# Make data base, printed on Tue Sep 27 10:00:49 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-38d174c0-ee6d-4c91-ab1c-f1a8ac70f0a0.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-f3f5a015-9aa2-4039-999c-a45428dcccc7.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -67,7 +67,7 @@ PWD = /home/nathanshih04/NathanFP
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/11_interop
+WSL_INTEROP = /run/WSL/414_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -278,7 +278,6 @@ convert: .FORCE
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 29):
- 
 	docker-compose up converter
 
 .FORCE:
@@ -289,6 +288,7 @@ convert: .FORCE
 	chmod -R u+rw .
 
 # files hash-table stats:
+ 
 # Load=16/1024=2%, Rehash=0, Collisions=0/37=0%
 # VPATH Search Paths
 
@@ -302,6 +302,6 @@ convert: .FORCE
 # strcache performance: lookups = 73 / hit rate = 35%
 # hash-table stats:
 # Load=47/8192=1%, Rehash=0, Collisions=1/73=1%
-# Finished Make data base on Sun Sep 25 15:55:47 2022
+# Finished Make data base on Tue Sep 27 10:00:49 2022
 
  
