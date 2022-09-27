@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Sep 27 10:00:49 2022
+# Make data base, printed on Tue Sep 27 10:08:07 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-f3f5a015-9aa2-4039-999c-a45428dcccc7.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-7eeec62e-e77c-41c3-af30-0f4c235175d1.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -67,7 +67,7 @@ PWD = /home/nathanshih04/NathanFP
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/414_interop
+WSL_INTEROP = /run/WSL/2357_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -153,11 +153,9 @@ TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu
 # environment
-MOTD_SHOWN = update-motd
-# environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=72/1024=7%, Rehash=0, Collisions=6/97=6%
+# Load=71/1024=7%, Rehash=0, Collisions=6/96=6%
 
 # Pattern-specific Variable Values
 
@@ -288,7 +286,6 @@ convert: .FORCE
 	chmod -R u+rw .
 
 # files hash-table stats:
- 
 # Load=16/1024=2%, Rehash=0, Collisions=0/37=0%
 # VPATH Search Paths
 
@@ -302,6 +299,6 @@ convert: .FORCE
 # strcache performance: lookups = 73 / hit rate = 35%
 # hash-table stats:
 # Load=47/8192=1%, Rehash=0, Collisions=1/73=1%
-# Finished Make data base on Tue Sep 27 10:00:49 2022
+# Finished Make data base on Tue Sep 27 10:08:07 2022
 
  
