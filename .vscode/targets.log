@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Oct  2 18:29:53 2022
+# Make data base, printed on Mon Oct  3 09:53:06 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-559724e5-271c-448a-9308-9040a8ae4e10.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-e088eb1d-fbae-42ee-9d35-a32feebb14ac.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -165,9 +165,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 2064, inode 217597): 30 files, no impossibilities.
+# . (device 2064, inode 217597): 29 files, no impossibilities.
 
-# 30 files, no impossibilities in 1 directories.
+# 29 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -279,9 +279,9 @@ convert: .FORCE
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 29):
 	docker-compose up converter
+ 
 
 .FORCE:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -296,12 +296,12 @@ convert: .FORCE
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 47 / storage = 492 B / avg = 10 B
-# current buf: size = 8162 B / used = 492 B / count = 47 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 46 / storage = 485 B / avg = 10 B
+# current buf: size = 8162 B / used = 485 B / count = 46 / avg = 10 B
 
-# strcache performance: lookups = 73 / hit rate = 35%
+# strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
-# Load=47/8192=1%, Rehash=0, Collisions=1/73=1%
-# Finished Make data base on Sun Oct  2 18:29:53 2022
+# Load=46/8192=1%, Rehash=0, Collisions=1/72=1%
+# Finished Make data base on Mon Oct  3 09:53:06 2022
 
  
