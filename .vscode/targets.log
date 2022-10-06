@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Oct  4 09:56:16 2022
+# Make data base, printed on Thu Oct  6 08:43:17 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-71bd9801-e9e2-41c5-81e0-81157333d804.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-c987d4cc-144a-498d-9a24-d3cc0d60748b.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -276,10 +276,10 @@ convert: .FORCE
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 29):
-	docker-compose up converter
-
  
 make: *** No rule to make target 'all'.  Stop.
+
+	docker-compose up converter
 
 .FORCE:
 #  Implicit rule search has not been done.
@@ -302,6 +302,6 @@ make: *** No rule to make target 'all'.  Stop.
 # strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
 # Load=46/8192=1%, Rehash=0, Collisions=1/72=1%
-# Finished Make data base on Tue Oct  4 09:56:16 2022
+# Finished Make data base on Thu Oct  6 08:43:17 2022
 
  
