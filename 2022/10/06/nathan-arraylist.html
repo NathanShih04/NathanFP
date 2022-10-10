@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -347,7 +347,7 @@ Cleared list2:
 <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">CarList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="kt">boolean</span> <span class="n">running</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: &quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: &quot;</span><span class="p">);</span>
 <span class="kt">int</span> <span class="n">inp</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
 
 <span class="k">while</span><span class="p">(</span><span class="n">running</span><span class="p">){</span>
@@ -355,19 +355,25 @@ Cleared list2:
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input name of the car to add: &quot;</span><span class="p">);</span>
         <span class="n">String</span> <span class="n">car</span> <span class="o">=</span> <span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
         <span class="n">CarList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: &quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: &quot;</span><span class="p">);</span>
         <span class="n">inp</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
     <span class="p">}</span>
     <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">inp</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input name of the car to delete: &quot;</span><span class="p">);</span>
         <span class="n">String</span> <span class="n">car</span> <span class="o">=</span> <span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
         <span class="n">CarList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: &quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: &quot;</span><span class="p">);</span>
         <span class="n">inp</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
     <span class="p">}</span>
     <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">inp</span> <span class="o">==</span> <span class="mi">3</span><span class="p">){</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">CarList</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: &quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: &quot;</span><span class="p">);</span>
+        <span class="n">inp</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">inp</span> <span class="o">==</span> <span class="mi">4</span><span class="p">){</span>
+        <span class="n">CarList</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">CarList</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: &quot;</span><span class="p">);</span>
         <span class="n">inp</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">scan</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>
     <span class="p">}</span>
     <span class="k">else</span><span class="p">{</span>
@@ -386,21 +392,25 @@ Cleared list2:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: 
+<pre>Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: 
 Input name of the car to add: 
-Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: 
+Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: 
+[Honda Civic]
+Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: 
 Input name of the car to add: 
-Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: 
-[Toyota Prius, Toyota Camry]
-Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: 
+Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: 
+[Honda Civic, Toyota Prius]
+Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: 
 Input name of the car to add: 
-Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: 
-[Toyota Prius, Toyota Camry, Honda Pilot]
-Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: 
+Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: 
+[Honda Civic, Toyota Prius, Honda Prelude]
+Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: 
 Input name of the car to delete: 
-Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: 
-[Toyota Prius, Honda Pilot]
-Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, and 4 to end: 
+Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: 
+[Honda Civic, Honda Prelude]
+Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: 
+[]
+Input 1 to add a car to favorite list, 2 to subtract a car from your favorite list, 3 to view the list, 4 to clear all, and 5 to end: 
 </pre>
 </div>
 </div>
