@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Oct 10 09:37:50 2022
+# Make data base, printed on Mon Oct 10 10:39:24 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-9d9fc1f7-0d19-4539-9573-956794fe3dd8.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-08e27a9d-98e0-495b-bd0c-1789ecba01d2.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -67,7 +67,7 @@ PWD = /home/nathanshih04/NathanFP
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/14287_interop
+WSL_INTEROP = /run/WSL/1193_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -279,12 +279,12 @@ convert: .FORCE
 	docker-compose up converter
 
 .FORCE:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 53):
 	chmod -R u+rw .
+ 
 
 # files hash-table stats:
 # Load=16/1024=2%, Rehash=0, Collisions=0/37=0%
@@ -300,6 +300,6 @@ convert: .FORCE
 # strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
 # Load=46/8192=1%, Rehash=0, Collisions=1/72=1%
-# Finished Make data base on Mon Oct 10 09:37:50 2022
+# Finished Make data base on Mon Oct 10 10:39:24 2022
 
  
