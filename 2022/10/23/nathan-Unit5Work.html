@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -138,6 +138,168 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>ALL VOCAB SHOWN IN CODE BELOW</p>
+<h4 id="Creating-a-class,-describe-naming-conventions">Creating a class, describe naming conventions<a class="anchor-link" href="#Creating-a-class,-describe-naming-conventions"> </a></h4><ul>
+<li>Created using class keyword</li>
+<li>Should be defined using camelcase (first letter lower all first letters upper)</li>
+</ul>
+<h4 id="Main-Method">Main Method<a class="anchor-link" href="#Main-Method"> </a></h4><ul>
+<li>Used to test a class</li>
+<li>Called when class is run</li>
+<li>Creates an object and test methods usually</li>
+</ul>
+<h4 id="This-keyword">This keyword<a class="anchor-link" href="#This-keyword"> </a></h4><ul>
+<li>Used to access properties of the class</li>
+<li>Constructor shows</li>
+</ul>
+<h4 id="Constructor">Constructor<a class="anchor-link" href="#Constructor"> </a></h4><ul>
+<li>Called whenever object is created</li>
+<li>Usually initialized fields</li>
+<li>Doesn't return anything </li>
+</ul>
+<h4 id="Accessor/Getter-methods">Accessor/Getter methods<a class="anchor-link" href="#Accessor/Getter-methods"> </a></h4><ul>
+<li>Used to get properties of an object outside of the class def.</li>
+<li>Getters can be applied on onlhy the properties which should be accessed outside the class</li>
+</ul>
+<h4 id="Mutator/Setter-Methods">Mutator/Setter Methods<a class="anchor-link" href="#Mutator/Setter-Methods"> </a></h4><ul>
+<li>Allow properties to be modified outside of the class definition</li>
+<li>Have a "void" return type</li>
+<li>Only set values</li>
+</ul>
+<h4 id="Access-modifiers">Access modifiers<a class="anchor-link" href="#Access-modifiers"> </a></h4><ul>
+<li>Control whether properties and methods can be accessed outside the class</li>
+<li>Public, private</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">prop1</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">prop2</span><span class="p">;</span>
+
+  <span class="c1">// Constructor here</span>
+  <span class="kd">public</span> <span class="nf">MyClass</span> <span class="p">(</span><span class="kt">int</span> <span class="n">prop1input</span><span class="p">,</span> <span class="kt">int</span> <span class="n">prop2input</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// setting properties using this to reference prop1 &amp; prop2 of the object</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">prop1</span> <span class="o">=</span> <span class="n">prop1input</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">prop2</span> <span class="o">=</span> <span class="n">prop2input</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// getter allows outside class to access prop1</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getProp1</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">prop1</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// setter allows outside class to set prop1</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setProp1</span> <span class="p">(</span><span class="kt">int</span> <span class="n">propVal</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">prop1</span> <span class="o">=</span> <span class="n">propVal</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">MyClass</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyClass</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+
+    <span class="c1">// using getter to access prop1</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getProp1</span><span class="p">());</span>
+
+    <span class="c1">// changing value of prop1</span>
+    <span class="n">obj</span><span class="p">.</span><span class="na">setProp1</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+    <span class="c1">// using getter to access new value of prop1</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">getProp1</span><span class="p">());</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">MyClass</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Static-methods/properties">Static methods/properties<a class="anchor-link" href="#Static-methods/properties"> </a></h4><ul>
+<li>Do not require an object, only have one instance that is same for all objects</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+    <span class="c1">// static method</span>
+    <span class="kd">static</span> <span class="n">String</span> <span class="nf">turtle</span> <span class="p">(</span><span class="n">String</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="s">&quot; TURTLES&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+  
+    <span class="c1">// static property</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="n">staticProp</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// no object needed for any of this</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">MyClass</span><span class="p">.</span><span class="na">turtle</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">));</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">MyClass</span><span class="p">.</span><span class="na">staticProp</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="n">MyClass</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>test TURTLES
+10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -247,7 +409,28 @@ window.onload = wrap_img;
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/NathanFP/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/NathanFP/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/NathanFP/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://twitter.com/NighthawkCoding" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/NathanFP/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/NathanFP/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
 </div>
 
   </div>

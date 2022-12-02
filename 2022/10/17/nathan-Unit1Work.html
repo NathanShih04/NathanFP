@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Unit 1 Work" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Java grade calc" />
-<meta property="og:description" content="Java grade calc" />
+<meta name="description" content="Java grade calc and learnings" />
+<meta property="og:description" content="Java grade calc and learnings" />
 <link rel="canonical" href="https://nathanshih04.github.io/NathanFP/2022/10/17/nathan-Unit1Work.html" />
 <meta property="og:url" content="https://nathanshih04.github.io/NathanFP/2022/10/17/nathan-Unit1Work.html" />
 <meta property="og:site_name" content="Nathan Fast Pages" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Unit 1 Work" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-17T00:00:00-05:00","datePublished":"2022-10-17T00:00:00-05:00","description":"Java grade calc","headline":"Unit 1 Work","mainEntityOfPage":{"@type":"WebPage","@id":"https://nathanshih04.github.io/NathanFP/2022/10/17/nathan-Unit1Work.html"},"url":"https://nathanshih04.github.io/NathanFP/2022/10/17/nathan-Unit1Work.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-17T00:00:00-05:00","datePublished":"2022-10-17T00:00:00-05:00","description":"Java grade calc and learnings","headline":"Unit 1 Work","mainEntityOfPage":{"@type":"WebPage","@id":"https://nathanshih04.github.io/NathanFP/2022/10/17/nathan-Unit1Work.html"},"url":"https://nathanshih04.github.io/NathanFP/2022/10/17/nathan-Unit1Work.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/NathanFP/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nathanshih04.github.io/NathanFP/feed.xml" title="Nathan Fast Pages" /><link rel="shortcut icon" type="image/x-icon" href="/NathanFP/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Unit 1 Work</h1><p class="page-description">Java grade calc</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-17T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 1 Work</h1><p class="page-description">Java grade calc and learnings</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-17T00:00:00-05:00" itemprop="datePublished">
         Oct 17, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -135,6 +135,125 @@ window.onload = wrap_img;
 <li>Increment/decrement ++ and --</li>
 </ul>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Casting-(division/rounding)">Casting (division/rounding)<a class="anchor-link" href="#Casting-(division/rounding)"> </a></h4><ul>
+<li>Must cast to double before dividing numbers</li>
+<li>Once casted, number will be rounded down/truncated</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">first</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">second</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="c1">// no casting (rounds down to 3)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">first</span><span class="o">/</span><span class="n">second</span><span class="p">);</span>
+
+<span class="c1">// With casting to double (gives correct answer of 3.5)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">first</span><span class="o">/</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">second</span><span class="p">);</span>
+
+<span class="kt">double</span> <span class="n">third</span> <span class="o">=</span> <span class="mf">6.7</span><span class="p">;</span>
+
+<span class="c1">// Without casting (shows full decimal)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">third</span><span class="p">);</span>
+
+<span class="c1">// WIth casting to integer (rounds down to 6)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">third</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
+3.5
+6.7
+6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Wrapper-Classes">Wrapper Classes<a class="anchor-link" href="#Wrapper-Classes"> </a></h4><ul>
+<li>Used to convert primitives in a class</li>
+<li>Needed for types such as ArrayLists</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+<span class="c1">// Using &quot;Integer&quot; wrapper class</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="c1">// Creating &quot;Integer&quot; from int</span>
+<span class="n">Integer</span> <span class="n">a_wrap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">a_wrap</span><span class="p">);</span>
+
+<span class="c1">// Java automatically casting int to Integer</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+
+<span class="c1">// Both elements present</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[6, 9]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Grade-Calc">Grade Calc<a class="anchor-link" href="#Grade-Calc"> </a></h3>
 </div>
 </div>
 </div>
@@ -249,7 +368,28 @@ You need a 78.0 on the test.
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/NathanFP/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/NathanFP/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/NathanFP/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://twitter.com/NighthawkCoding" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/NathanFP/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/NathanFP/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
 </div>
 
   </div>

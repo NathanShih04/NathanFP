@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -133,6 +133,109 @@ window.onload = wrap_img;
 <li>!(a || b) = (!a &amp;&amp; !b)</li>
 <li>If-else statements allow for more conditions to be defined</li>
 <li>Else-if statements allow for more conditions to be defined</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="De-Morgan's-Law">De Morgan's Law<a class="anchor-link" href="#De-Morgan's-Law"> </a></h4><ul>
+<li>shows how we can remove an &amp;&amp; statement or remove an || statement. It's the way of creating equivalent statements by switching the &amp;&amp; or || and distributing the ! sign if you need.</li>
+</ul>
+<h4 id="Compound-Boolean-Expression">Compound Boolean Expression<a class="anchor-link" href="#Compound-Boolean-Expression"> </a></h4><ul>
+<li>Combinations of boolean operators</li>
+<li>Can be and (&amp;&amp;), or (||), not (!), as well as parenthesis for grouping purposes</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// First demonstration</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;First Demonstration:&quot;</span><span class="p">);</span>
+<span class="kt">boolean</span> <span class="n">lights</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">fan</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="c1">// first way</span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">lights</span> <span class="o">&amp;&amp;</span> <span class="n">fan</span><span class="p">)){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Something is off!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// second way</span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">lights</span> <span class="o">||</span> <span class="o">!</span><span class="n">fan</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Something is off!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// if one of the variables is set to true</span>
+<span class="k">else</span><span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Everything is on!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+
+<span class="c1">// Second demonstration</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Second Demonstration:&quot;</span><span class="p">);</span>
+<span class="kt">boolean</span> <span class="n">sink</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">shower</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="c1">// first way</span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">sink</span> <span class="o">||</span> <span class="n">shower</span><span class="p">)){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Everything is off!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// second way</span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">sink</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">shower</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Everything is off!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">else</span><span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Something is on!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+
+<span class="c1">// third demonstration</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Third Demonstration: &quot;</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="c1">// first way</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">num1</span> <span class="o">==</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">num2</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">));</span>
+<span class="c1">// second way</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num1</span> <span class="o">!=</span> <span class="mi">5</span> <span class="o">||</span> <span class="n">num2</span> <span class="o">==</span> <span class="mi">5</span><span class="p">);</span>
+
+
+<span class="c1">// Weird and confusing</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Overly complicated for no reason:&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="p">((</span><span class="n">lights</span> <span class="o">||</span> <span class="o">!</span><span class="n">fan</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">sink</span> <span class="o">&amp;&amp;</span> <span class="n">shower</span><span class="p">)){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Either lights are on or fan is off, or sink and shower are on.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Truth-Tables">Truth Tables<a class="anchor-link" href="#Truth-Tables"> </a></h4><ul>
+<li>Used to see values of boolean expressions</li>
+<li>A truth table has one column for each variable, one row for each possible combination of variable values, and a column that specifies the value of the function for that combination.
+0 | 0 | 0 |
+1 | 0 | 1 |
+### OR X | 0 | 1 |
+0 | 0 | 1 |
+1 | 1 | 1 |</li>
 </ul>
 
 </div>
@@ -909,7 +1012,28 @@ The Average is : 13.0
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/NathanFP/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/NathanFP/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/NathanFP/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://twitter.com/NighthawkCoding" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/NathanFP/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/NathanFP/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
 </div>
 
   </div>
