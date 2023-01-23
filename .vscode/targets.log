@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jan 22 23:55:32 2023
+# Make data base, printed on Mon Jan 23 09:53:28 2023
 
 # Variables
 
@@ -59,7 +57,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-03dcecf2-fc7a-464f-b5e8-b972f953a003.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-934c853b-79c5-42ac-a48c-e0bf74db1851.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -277,8 +275,10 @@ restart-jekyll: .FORCE
 #  recipe to execute (from 'Makefile', line 50):
 	docker-compose restart jekyll
 
-help:
  
+make: *** No rule to make target 'all'.  Stop.
+
+help:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -326,6 +326,6 @@ convert: .FORCE
 # strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
 # Load=46/8192=1%, Rehash=0, Collisions=1/72=1%
-# Finished Make data base on Sun Jan 22 23:55:32 2023
+# Finished Make data base on Mon Jan 23 09:53:28 2023
 
  
