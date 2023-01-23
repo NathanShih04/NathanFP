@@ -8,12 +8,14 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Dec 15 10:01:05 2022
+# Make data base, printed on Sun Jan 22 23:55:32 2023
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
+# environment
+RUBY_VERSION = ruby-2.7.7
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -22,6 +24,8 @@ WSLENV = VSCODE_WSL_EXT_LOCATION/up
 .SHELLFLAGS := -c
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+rvm_path = /home/nathanshih04/.rvm
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
@@ -33,7 +37,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/nathanshih04/.vscode-server/bin/1ad8d514439d5077d2b0b7ee64d2ce82a9308e5a/node
+_ = /home/nathanshih04/.vscode-server/bin/97dec172d3256f8ca4bfb2143f3f76b503ca0534/node
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # 'override' directive
@@ -47,13 +51,15 @@ VSCODE_CWD = /mnt/c/Downloaded Apps/Coding Apps/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/nathanshih04/.vscode-server/bin/1ad8d514439d5077d2b0b7ee64d2ce82a9308e5a/bin/remote-cli:/home/nathanshih04/.local/bin:/home/nathanshih04/anaconda3/bin:/home/nathanshih04/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Natha/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Natha/AppData/Local/GitHubDesktop/bin:/mnt/c/Downloaded Apps/Coding Apps/Microsoft VS Code/bin:/snap/bin
+PATH = /home/nathanshih04/.vscode-server/bin/97dec172d3256f8ca4bfb2143f3f76b503ca0534/bin/remote-cli:/home/nathanshih04/.rvm/gems/ruby-2.7.7/bin:/home/nathanshih04/.rvm/gems/ruby-2.7.7@global/bin:/home/nathanshih04/.rvm/rubies/ruby-2.7.7/bin:/home/nathanshih04/.local/bin:/home/nathanshih04/gems/bin:/home/nathanshih04/anaconda3/bin:/home/nathanshih04/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Natha/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Natha/AppData/Local/GitHubDesktop/bin:/mnt/c/Downloaded Apps/Coding Apps/Microsoft VS Code/bin:/snap/bin:/home/nathanshih04/.rvm/bin:/home/nathanshih04/.rvm/bin
+# environment
+rvm_stored_umask = 0022
 # environment
 CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-dd31898c-18ae-485d-b0a5-feb84f8d5a1a.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-03dcecf2-fc7a-464f-b5e8-b972f953a003.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -63,11 +69,15 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # environment
 CONDA_EXE = /home/nathanshih04/anaconda3/bin/conda
 # environment
+rvm_bin_path = /home/nathanshih04/.rvm/bin
+# environment
 PWD = /home/nathanshih04/NathanFP
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/95_interop
+GEM_HOME = /home/nathanshih04/.rvm/gems/ruby-2.7.7
+# environment
+WSL_INTEROP = /run/WSL/11_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -87,11 +97,15 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
 MAKELEVEL := 0
 # environment
+GEM_PATH = /home/nathanshih04/.rvm/gems/ruby-2.7.7:/home/nathanshih04/.rvm/gems/ruby-2.7.7@global
+# environment
 CONDA_DEFAULT_ENV = base
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
+# environment
+IRBRC = /home/nathanshih04/.rvm/rubies/ruby-2.7.7/.irbrc
 # environment
 CONDA_SHLVL = 1
 # environment
@@ -104,6 +118,8 @@ USER = nathanshih04
 .DEFAULT_GOAL := help
 # environment
 NAME = LAPTOP-TSG4ERSF
+# environment
+rvm_version = 1.29.12-next (master)
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -122,6 +138,8 @@ MFLAGS = -pqrR
 *D = $(patsubst %/,%,$(dir $*))
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
+# environment
+rvm_user_install_flag = 1
 # automatic
 +F = $(notdir $+)
 # environment
@@ -138,12 +156,16 @@ CONDA_PYTHON_EXE = /home/nathanshih04/anaconda3/bin/python
 HOSTTYPE = x86_64
 # automatic
 ^F = $(notdir $^)
+# environment
+rvm_prefix = /home/nathanshih04
 # default
 SUFFIXES := 
 # environment
 _CE_M = 
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+rvm_loaded_flag = 1
 # default
 .RECIPEPREFIX := 
 # environment
@@ -153,9 +175,13 @@ TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu
 # environment
+MY_RUBY_HOME = /home/nathanshih04/.rvm/rubies/ruby-2.7.7
+# environment
+MOTD_SHOWN = update-motd
+# environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=71/1024=7%, Rehash=0, Collisions=6/96=6%
+# Load=84/1024=8%, Rehash=0, Collisions=7/109=6%
 
 # Pattern-specific Variable Values
 
@@ -252,6 +278,7 @@ restart-jekyll: .FORCE
 	docker-compose restart jekyll
 
 help:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -286,7 +313,6 @@ convert: .FORCE
 	chmod -R u+rw .
 
 # files hash-table stats:
- 
 # Load=16/1024=2%, Rehash=0, Collisions=0/37=0%
 # VPATH Search Paths
 
@@ -300,6 +326,6 @@ convert: .FORCE
 # strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
 # Load=46/8192=1%, Rehash=0, Collisions=1/72=1%
-# Finished Make data base on Thu Dec 15 10:01:05 2022
+# Finished Make data base on Sun Jan 22 23:55:32 2023
 
  
