@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jan 30 23:41:15 2023
+# Make data base, printed on Tue Mar  7 10:03:22 2023
 
 # Variables
 
@@ -19,7 +19,7 @@ RUBY_VERSION = ruby-2.7.7
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
 # default
 .SHELLFLAGS := -c
 # automatic
@@ -37,7 +37,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/nathanshih04/.vscode-server/bin/97dec172d3256f8ca4bfb2143f3f76b503ca0534/node
+_ = /home/nathanshih04/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/node
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # 'override' directive
@@ -51,7 +51,7 @@ VSCODE_CWD = /mnt/c/Downloaded Apps/Coding Apps/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/nathanshih04/.vscode-server/bin/97dec172d3256f8ca4bfb2143f3f76b503ca0534/bin/remote-cli:/home/nathanshih04/.rvm/gems/ruby-2.7.7/bin:/home/nathanshih04/.rvm/gems/ruby-2.7.7@global/bin:/home/nathanshih04/.rvm/rubies/ruby-2.7.7/bin:/home/nathanshih04/.local/bin:/home/nathanshih04/gems/bin:/home/nathanshih04/anaconda3/bin:/home/nathanshih04/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Natha/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Natha/AppData/Local/GitHubDesktop/bin:/mnt/c/Downloaded Apps/Coding Apps/Microsoft VS Code/bin:/snap/bin:/home/nathanshih04/.rvm/bin:/home/nathanshih04/.rvm/bin
+PATH = /home/nathanshih04/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/bin/remote-cli:/home/nathanshih04/.rvm/gems/ruby-2.7.7/bin:/home/nathanshih04/.rvm/gems/ruby-2.7.7@global/bin:/home/nathanshih04/.rvm/rubies/ruby-2.7.7/bin:/home/nathanshih04/.local/bin:/home/nathanshih04/gems/bin:/home/nathanshih04/anaconda3/bin:/home/nathanshih04/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Natha/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Natha/AppData/Local/GitHubDesktop/bin:/mnt/c/Downloaded Apps/Coding Apps/Microsoft VS Code/bin:/snap/bin:/home/nathanshih04/.rvm/bin:/home/nathanshih04/.rvm/bin
 # environment
 rvm_stored_umask = 0022
 # environment
@@ -61,7 +61,9 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-6b922b0e-d685-44f2-ba26-ffd8fa2464a5.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-fc53cd1f-d86f-4068-b24b-6e7928bbd897.sock
+# environment
+VSCODE_SERVER_TAR = /mnt/c/Users/Natha/AppData/Local/Temp/vscode-remote-wsl/92da9481c0904c6adfe372c12da3b7748d74bdcb/vscode-server-stable-linux-x64.tar.gz
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -83,9 +85,9 @@ PWD = /home/nathanshih04/NathanFP
 # environment
 GEM_HOME = /home/nathanshih04/.rvm/gems/ruby-2.7.7
 # environment
-WSL_INTEROP = /run/WSL/11_interop
+WSL_INTEROP = /run/WSL/35_interop
 # environment
-PULSE_SERVER = /mnt/wslg/PulseServer
+PULSE_SERVER = unix:/mnt/wslg/PulseServer
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -131,7 +133,7 @@ rvm_version = 1.29.12-next (master)
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Natha/.vscode/extensions/ms-vscode-remote.remote-wsl-0.72.0
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Natha/.vscode/extensions/ms-vscode-remote.remote-wsl-0.75.3
 # default
 MAKE_COMMAND := make
 # default
@@ -191,7 +193,7 @@ MOTD_SHOWN = update-motd
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=89/1024=9%, Rehash=0, Collisions=7/114=6%
+# Load=90/1024=9%, Rehash=0, Collisions=7/115=6%
 
 # Pattern-specific Variable Values
 
@@ -276,11 +278,11 @@ quick-build: .FORCE
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 23):
+ 
 	docker-compose stop || true;
 	docker build -t fastai/fastpages-jekyll -f _action_files/fastpages-jekyll.Dockerfile .
 	docker-compose build 
 
- 
 restart-jekyll: .FORCE
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -336,6 +338,6 @@ convert: .FORCE
 # strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
 # Load=46/8192=1%, Rehash=0, Collisions=1/72=1%
-# Finished Make data base on Mon Jan 30 23:41:15 2023
+# Finished Make data base on Tue Mar  7 10:03:22 2023
 
  
