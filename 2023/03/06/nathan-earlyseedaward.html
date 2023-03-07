@@ -60,19 +60,17 @@
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">static</span> <span class="n">String</span> <span class="nf">add</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">double</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="s">&quot;first val :&quot;</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
-    <span class="kt">int</span> <span class="n">a1</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">a</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">b1</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">b</span><span class="p">;</span>
-    <span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">a1</span><span class="p">);</span>
-    <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">b1</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">static</span> <span class="n">String</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
     <span class="kt">int</span> <span class="n">number0</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
     <span class="kt">int</span> <span class="n">number1</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
 
     <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">number0</span> <span class="o">+</span> <span class="n">number1</span><span class="p">;</span>
-    <span class="n">String</span> <span class="n">s3</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">toBinaryString</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span>
+    <span class="n">String</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">toBinaryString</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span>
 
-    <span class="k">return</span> <span class="n">s3</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -91,6 +89,8 @@
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">110</span><span class="p">));</span>
 </pre></div>
 
     </div>
@@ -103,8 +103,9 @@
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1.0first val :1.0
-10
+<pre>10
+11
+1000
 </pre>
 </div>
 </div>
