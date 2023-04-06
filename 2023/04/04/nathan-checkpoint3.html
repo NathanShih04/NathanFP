@@ -132,11 +132,26 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BubbleTort</span><span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BubbleTort</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">comparisons</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">swaps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getComparisons</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">comparisons</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getSwaps</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">swaps</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bubbleTort</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">){</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">comparisons</span><span class="o">++</span><span class="p">;</span>
                 <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">swaps</span><span class="o">++</span><span class="p">;</span>
                     <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
                     <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">;</span>
                     <span class="n">arr</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
@@ -144,21 +159,56 @@ window.onload = wrap_img;
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
+
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">toString</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">){</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
     <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">fiveThousand</span><span class="p">(){</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">tortArr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5001</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">Random</span> <span class="n">rand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5001</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">tortArr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span><span class="p">(</span><span class="n">tortArr</span><span class="p">);</span>
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">Group1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
-        <span class="n">BubbleTort</span> <span class="n">RussianTortoises</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BubbleTort</span><span class="p">();</span>
-        <span class="n">tortGroup</span><span class="p">.</span><span class="na">bubbleTort</span><span class="p">(</span><span class="n">Group1</span><span class="p">);</span>
-        <span class="n">tortGroup</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">Group1</span><span class="p">);</span>
+        <span class="n">BubbleTort</span> <span class="n">tortoiseColony</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BubbleTort</span><span class="p">();</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">Long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
+            <span class="n">tortoiseColony</span><span class="p">.</span><span class="na">bubbleTort</span><span class="p">(</span><span class="n">tortoiseColony</span><span class="p">.</span><span class="na">fiveThousand</span><span class="p">());</span>
+            <span class="c1">// tortoiseColony.toString(tortoiseColony.fiveThousand());</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Number of Comparisons: &quot;</span> <span class="o">+</span> <span class="n">tortoiseColony</span><span class="p">.</span><span class="na">getComparisons</span><span class="p">());</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot; | Number of Swaps: &quot;</span> <span class="o">+</span> <span class="n">tortoiseColony</span><span class="p">.</span><span class="na">getSwaps</span><span class="p">());</span>
+            <span class="n">Long</span> <span class="n">endTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
+            <span class="n">Long</span> <span class="n">elapsedTime</span> <span class="o">=</span> <span class="n">endTime</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">;</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; | Milliseconds Taken: &quot;</span> <span class="o">+</span> <span class="n">elapsedTime</span><span class="p">);</span>
+        <span class="p">}</span>
+        
     <span class="p">}</span>
 <span class="p">}</span>
+</pre></div>
 
-<span class="n">BubbleTort</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">BubbleTort</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -170,36 +220,20 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public class BubbleTort{</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public void bubbleTort(int arr[]){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        for (int i = 0; i &lt; arr.length - 1; i++){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            for (int j = 0; j &lt; arr.length - i - 1; j++){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                if (arr[j] &gt; arr[j + 1]) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                    int temp = arr[j];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                    arr[j] = arr[j + 1];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                    arr[j + 1] = temp;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public void toString(int arr[]){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        for(int i = 0; i &lt; arr.length; i++){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            System.out.print(arr[i] + &#34; &#34;);</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        System.out.println();</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public static void main(String[] args){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        int[] Group1 = {6, 12, 23, 14, 4, 1};</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        BubbleTort RussianTortoises = new BubbleTort();</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        tortGroup.bubbleTort(ll);</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        tortGroup.toString(ll);</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
-<span class="ansi-red-intense-fg ansi-bold">Unresolved dependencies:</span>
-<span class="ansi-red-intense-fg ansi-bold">   - variable ll</span>
-<span class="ansi-red-intense-fg ansi-bold">   - variable tortGroup</span></pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Number of Comparisons: 12502500 | Number of Swaps: 6230244Milliseconds Taken: 87
+Number of Comparisons: 25005000 | Number of Swaps: 12437880Milliseconds Taken: 71
+Number of Comparisons: 37507500 | Number of Swaps: 18610088Milliseconds Taken: 36
+Number of Comparisons: 50010000 | Number of Swaps: 24943532Milliseconds Taken: 79
+Number of Comparisons: 62512500 | Number of Swaps: 31227834Milliseconds Taken: 63
+Number of Comparisons: 75015000 | Number of Swaps: 37581258Milliseconds Taken: 73
+Number of Comparisons: 87517500 | Number of Swaps: 43832969Milliseconds Taken: 56
+Number of Comparisons: 100020000 | Number of Swaps: 50111777Milliseconds Taken: 76
+Number of Comparisons: 112522500 | Number of Swaps: 56442241Milliseconds Taken: 48
+Number of Comparisons: 125025000 | Number of Swaps: 62724128Milliseconds Taken: 24
+Number of Comparisons: 137527500 | Number of Swaps: 68992510Milliseconds Taken: 46
+Number of Comparisons: 150030000 | Number of Swaps: 75166910Milliseconds Taken: 47
+</pre>
 </div>
 </div>
 
