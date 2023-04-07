@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Apr  6 09:48:53 2023
+# Make data base, printed on Fri Apr  7 08:39:04 2023
 
 # Variables
 
@@ -19,7 +17,7 @@ RUBY_VERSION = ruby-2.7.7
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
+WSLENV = VSCODE_WSL_EXT_LOCATION/up
 # default
 .SHELLFLAGS := -c
 # automatic
@@ -61,9 +59,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-c2ec1185-b9c9-4866-acfb-31eebd2910f9.sock
-# environment
-VSCODE_SERVER_TAR = /mnt/c/Users/Natha/AppData/Local/Temp/vscode-remote-wsl/b7886d7461186a5eac768481578c1d7ca80e2d21/vscode-server-stable-linux-x64.tar.gz
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-f63bd835-56d2-4d27-b0fd-f4f385700928.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -189,11 +185,9 @@ WSL_DISTRO_NAME = Ubuntu
 # environment
 MY_RUBY_HOME = /home/nathanshih04/.rvm/rubies/ruby-2.7.7
 # environment
-MOTD_SHOWN = update-motd
-# environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=90/1024=9%, Rehash=0, Collisions=7/115=6%
+# Load=88/1024=9%, Rehash=0, Collisions=7/113=6%
 
 # Pattern-specific Variable Values
 
@@ -278,7 +272,6 @@ quick-build: .FORCE
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 23):
- 
 	docker-compose stop || true;
 	docker build -t fastai/fastpages-jekyll -f _action_files/fastpages-jekyll.Dockerfile .
 	docker-compose build 
@@ -288,6 +281,9 @@ restart-jekyll: .FORCE
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 50):
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 	docker-compose restart jekyll
 
 help:
@@ -338,6 +334,6 @@ convert: .FORCE
 # strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
 # Load=46/8192=1%, Rehash=0, Collisions=1/72=1%
-# Finished Make data base on Thu Apr  6 09:48:53 2023
+# Finished Make data base on Fri Apr  7 08:39:04 2023
 
  
