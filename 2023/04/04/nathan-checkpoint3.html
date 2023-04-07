@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      4 min read
     
 </span></p>
 
@@ -134,6 +134,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
 
+<span class="c1">// BUBBLE SORT</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">BubbleTort</span><span class="p">{</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="n">comparisons</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="n">swaps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -210,7 +211,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MergeTort</span><span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// MERGE SORT</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MergeTort</span><span class="p">{</span>
     
     <span class="kd">public</span> <span class="kt">int</span> <span class="n">comparisons</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="n">swaps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -219,8 +221,16 @@ window.onload = wrap_img;
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">comparisons</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setComparisons</span><span class="p">(</span><span class="kt">int</span> <span class="n">newComparisons</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">comparisons</span> <span class="o">=</span> <span class="n">newComparisons</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getSwaps</span><span class="p">(){</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">swaps</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSwaps</span><span class="p">(</span><span class="kt">int</span> <span class="n">newSwaps</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">swaps</span> <span class="o">=</span> <span class="n">newSwaps</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">mergeTort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
@@ -236,11 +246,9 @@ window.onload = wrap_img;
         <span class="kt">int</span><span class="o">[]</span> <span class="n">right</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span> <span class="o">-</span> <span class="n">mid</span><span class="o">]</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">mid</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
-            <span class="n">swaps</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">right</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">mid</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
-            <span class="n">swaps</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="n">mergeTort</span><span class="p">(</span><span class="n">left</span><span class="p">);</span>
         <span class="n">mergeTort</span><span class="p">(</span><span class="n">right</span><span class="p">);</span>
@@ -248,29 +256,32 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
 
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">right</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">right</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">nLeft</span> <span class="o">=</span> <span class="n">left</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">nRight</span> <span class="o">=</span> <span class="n">right</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">nLeft</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">nRight</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">comparisons</span><span class="o">++</span><span class="p">;</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">compares</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">swaps</span><span class="o">++</span><span class="p">;</span>
                 <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
                 <span class="n">i</span><span class="o">++</span><span class="p">;</span>
             <span class="p">}</span> 
             <span class="k">else</span> <span class="p">{</span>
-                <span class="n">compares</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">swaps</span><span class="o">++</span><span class="p">;</span>
                 <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">right</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
                 <span class="n">j</span><span class="o">++</span><span class="p">;</span>
             <span class="p">}</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">nLeft</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">comparisons</span><span class="o">++</span><span class="p">;</span>
             <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">left</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
             <span class="n">i</span><span class="o">++</span><span class="p">;</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">nRight</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">comparisons</span><span class="o">++</span><span class="p">;</span>
             <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">right</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
             <span class="n">j</span><span class="o">++</span><span class="p">;</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
@@ -289,8 +300,9 @@ window.onload = wrap_img;
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         <span class="n">MergeTort</span> <span class="n">tortoiseColony</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MergeTort</span><span class="p">();</span>
-
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">tortoiseColony</span><span class="p">.</span><span class="na">setComparisons</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+            <span class="n">tortoiseColony</span><span class="p">.</span><span class="na">setSwaps</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
             <span class="n">Long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
             <span class="n">tortoiseColony</span><span class="p">.</span><span class="na">mergeTort</span><span class="p">(</span><span class="n">tortoiseColony</span><span class="p">.</span><span class="na">fiveThousand</span><span class="p">());</span>
             <span class="c1">// tortoiseColony.toString(tortoiseColony.fiveThousand());</span>
@@ -320,8 +332,10 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">BubbleTort</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bubble sort has a time complexity of O(n^2)&quot;</span><span class="p">);</span>
+<span class="n">BubbleTort</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;---------------------------------------------------------------------------&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Merge sort has a time complexity of O(n log n)&quot;</span><span class="p">);</span>
 <span class="n">MergeTort</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
@@ -335,123 +349,34 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Number of Comparisons: 12502500 | Number of Swaps: 6176178 | Milliseconds Taken: 12
-Number of Comparisons: 12502500 | Number of Swaps: 6173121 | Milliseconds Taken: 11
-Number of Comparisons: 12502500 | Number of Swaps: 6164346 | Milliseconds Taken: 11
-Number of Comparisons: 12502500 | Number of Swaps: 6269077 | Milliseconds Taken: 12
-Number of Comparisons: 12502500 | Number of Swaps: 6309760 | Milliseconds Taken: 12
-Number of Comparisons: 12502500 | Number of Swaps: 6198808 | Milliseconds Taken: 14
-Number of Comparisons: 12502500 | Number of Swaps: 6241585 | Milliseconds Taken: 10
-Number of Comparisons: 12502500 | Number of Swaps: 6271913 | Milliseconds Taken: 13
-Number of Comparisons: 12502500 | Number of Swaps: 6206311 | Milliseconds Taken: 14
-Number of Comparisons: 12502500 | Number of Swaps: 6227436 | Milliseconds Taken: 13
-Number of Comparisons: 12502500 | Number of Swaps: 6186862 | Milliseconds Taken: 12
-Number of Comparisons: 12502500 | Number of Swaps: 6385030 | Milliseconds Taken: 14
+<pre>Bubble sort has a time complexity of O(n^2)
+Number of Comparisons: 12502500 | Number of Swaps: 6224321 | Milliseconds Taken: 29
+Number of Comparisons: 12502500 | Number of Swaps: 6247080 | Milliseconds Taken: 22
+Number of Comparisons: 12502500 | Number of Swaps: 6302218 | Milliseconds Taken: 19
+Number of Comparisons: 12502500 | Number of Swaps: 6275401 | Milliseconds Taken: 16
+Number of Comparisons: 12502500 | Number of Swaps: 6158124 | Milliseconds Taken: 16
+Number of Comparisons: 12502500 | Number of Swaps: 6297826 | Milliseconds Taken: 21
+Number of Comparisons: 12502500 | Number of Swaps: 6272452 | Milliseconds Taken: 29
+Number of Comparisons: 12502500 | Number of Swaps: 6166890 | Milliseconds Taken: 40
+Number of Comparisons: 12502500 | Number of Swaps: 6227517 | Milliseconds Taken: 38
+Number of Comparisons: 12502500 | Number of Swaps: 6279789 | Milliseconds Taken: 32
+Number of Comparisons: 12502500 | Number of Swaps: 6179842 | Milliseconds Taken: 26
+Number of Comparisons: 12502500 | Number of Swaps: 6150823 | Milliseconds Taken: 31
 ---------------------------------------------------------------------------
+Merge sort has a time complexity of O(n log n)
+Number of Comparisons: 61822 | Number of Swaps: 55245 | Milliseconds Taken: 2
+Number of Comparisons: 61822 | Number of Swaps: 55211 | Milliseconds Taken: 1
+Number of Comparisons: 61822 | Number of Swaps: 55192 | Milliseconds Taken: 2
+Number of Comparisons: 61822 | Number of Swaps: 55227 | Milliseconds Taken: 1
+Number of Comparisons: 61822 | Number of Swaps: 55219 | Milliseconds Taken: 1
+Number of Comparisons: 61822 | Number of Swaps: 55260 | Milliseconds Taken: 1
+Number of Comparisons: 61822 | Number of Swaps: 55289 | Milliseconds Taken: 2
+Number of Comparisons: 61822 | Number of Swaps: 55177 | Milliseconds Taken: 1
+Number of Comparisons: 61822 | Number of Swaps: 55210 | Milliseconds Taken: 1
+Number of Comparisons: 61822 | Number of Swaps: 55226 | Milliseconds Taken: 2
+Number of Comparisons: 61822 | Number of Swaps: 55206 | Milliseconds Taken: 5
+Number of Comparisons: 61822 | Number of Swaps: 55232 | Milliseconds Taken: 2
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public class MergeTort{</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public int comparisons = 0;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public int swaps = 0;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public int getComparisons(){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        return this.comparisons;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public int getSwaps(){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        return this.swaps;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public void mergeTort(int[] arr) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        if (arr == null) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            return;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        int n = arr.length;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        if (n &lt;= 1) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            return;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        int mid = n / 2;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        int[] left = new int[mid];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        int[] right = new int[n - mid];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        for (int i = 0; i &lt; mid; i++) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            left[i] = arr[i];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            swaps++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        for (int i = mid; i &lt; n; i++) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            right[i - mid] = arr[i];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            swaps++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        mergeTort(left);</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        mergeTort(right);</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        merge(left, right, arr);</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    private void merge(int[] left, int[] right, int[] arr) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        int nLeft = left.length;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        int nRight = right.length;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        int i = 0, j = 0, k = 0;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        while (i &lt; nLeft &amp;&amp; j &lt; nRight) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            if (left[i] &lt;= right[j]) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                compares++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                arr[k] = left[i];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                i++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            } </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            else {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                compares++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                arr[k] = right[j];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">                j++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            k++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        while (i &lt; nLeft) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            arr[k] = left[i];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            i++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            k++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        while (j &lt; nRight) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            arr[k] = right[j];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            j++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            k++;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public int[] fiveThousand(){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        int[] tortArr = new int[5001];</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        Random rand = new Random();</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        for(int i = 0; i &lt; 5001; i++){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            tortArr[i] = rand.nextInt(500) + 1;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        return(tortArr);</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public static void main(String[] args){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        MergeTort tortoiseColony = new MergeTort();</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        for(int j = 0; j &lt; 12; j++){</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            Long startTime = System.currentTimeMillis();</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            tortoiseColony.mergeTort(tortoiseColony.fiveThousand());</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            // tortoiseColony.toString(tortoiseColony.fiveThousand());</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            System.out.print(&#34;Number of Comparisons: &#34; + tortoiseColony.getComparisons());</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            System.out.print(&#34; | Number of Swaps: &#34; + tortoiseColony.getSwaps());</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            Long endTime = System.currentTimeMillis();</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            Long elapsedTime = endTime - startTime;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            System.out.println(&#34; | Milliseconds Taken: &#34; + elapsedTime);</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
-<span class="ansi-red-intense-fg ansi-bold">Unresolved dependencies:</span>
-<span class="ansi-red-intense-fg ansi-bold">   - variable compares</span></pre>
 </div>
 </div>
 
