@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Apr 19 11:04:21 2023
+# Make data base, printed on Fri Apr 21 10:43:53 2023
 
 # Variables
 
@@ -61,7 +61,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-fdbdb88a-b8bd-4713-93d3-f39c9ef7267a.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-60bf2b65-c2d9-48e0-818b-fe0061b6da51.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -83,7 +83,7 @@ PWD = /home/nathanshih04/NathanFP
 # environment
 GEM_HOME = /home/nathanshih04/.rvm/gems/ruby-2.7.7
 # environment
-WSL_INTEROP = /run/WSL/12_interop
+WSL_INTEROP = /run/WSL/1141_interop
 # environment
 PULSE_SERVER = unix:/mnt/wslg/PulseServer
 # environment
@@ -187,11 +187,9 @@ WSL_DISTRO_NAME = Ubuntu
 # environment
 MY_RUBY_HOME = /home/nathanshih04/.rvm/rubies/ruby-2.7.7
 # environment
-MOTD_SHOWN = update-motd
-# environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=89/1024=9%, Rehash=0, Collisions=7/114=6%
+# Load=88/1024=9%, Rehash=0, Collisions=7/113=6%
 
 # Pattern-specific Variable Values
 
@@ -278,13 +276,13 @@ quick-build: .FORCE
 #  recipe to execute (from 'Makefile', line 23):
 	docker-compose stop || true;
 	docker build -t fastai/fastpages-jekyll -f _action_files/fastpages-jekyll.Dockerfile .
- 
 	docker-compose build 
 
 restart-jekyll: .FORCE
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 #  recipe to execute (from 'Makefile', line 50):
 	docker-compose restart jekyll
 
@@ -336,6 +334,6 @@ convert: .FORCE
 # strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
 # Load=46/8192=1%, Rehash=0, Collisions=1/72=1%
-# Finished Make data base on Wed Apr 19 11:04:21 2023
+# Finished Make data base on Fri Apr 21 10:43:53 2023
 
  
