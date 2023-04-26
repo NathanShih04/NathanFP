@@ -156,8 +156,9 @@ window.onload = wrap_img;
         <span class="k">return</span> <span class="n">bookCount</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="c1">// Overwrites default toString()</span>
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
-        <span class="k">return</span><span class="p">(</span><span class="n">title</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">(</span><span class="s">&quot;Title of book: &quot;</span> <span class="o">+</span> <span class="n">title</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="n">Long</span> <span class="nf">shelfLife</span><span class="p">(){</span>
@@ -194,9 +195,9 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>ID for book1: 79, All about turtles
-ID for book2: 49, All about birds
-4
+<pre>ID for book1: 64, Title of book: All about turtles
+ID for book2: 28, Title of book: All about birds
+2
 </pre>
 </div>
 </div>
