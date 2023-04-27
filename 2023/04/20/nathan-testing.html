@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -303,7 +303,7 @@ J.K. Rowling
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         <span class="k">try</span><span class="p">{</span>
-            <span class="n">Textbook</span> <span class="n">textbook1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">&quot;Turtles are the Best&quot;</span><span class="p">);</span>
+            <span class="n">Textbook</span> <span class="n">textbook1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">&quot;Turtles are the Best In the World&quot;</span><span class="p">);</span>
             <span class="n">Textbook</span> <span class="n">textbook2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">&quot;How to Write Harry Potter&quot;</span><span class="p">);</span>
             <span class="n">textbook1</span><span class="p">.</span><span class="na">setAuthor</span><span class="p">(</span><span class="s">&quot;Nathan Shih&quot;</span><span class="p">);</span>
             <span class="n">textbook2</span><span class="p">.</span><span class="na">setAuthor</span><span class="p">(</span><span class="s">&quot;J.K. Rowling&quot;</span><span class="p">);</span>
@@ -338,6 +338,155 @@ J.K. Rowling
 J.K. Rowling
 1002
 1002
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Vehicle</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span> 
+
+    <span class="kd">public</span> <span class="nf">Vehicle</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">honk</span><span class="p">(){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;HONK MEEP BEEEEEEEP!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Car</span> <span class="kd">extends</span> <span class="n">Vehicle</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Car</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// methods and attributes</span>
+
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Car</span> <span class="n">car1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Car</span><span class="p">(</span><span class="s">&quot;Lexus GS430&quot;</span><span class="p">);</span>
+
+        <span class="n">car1</span><span class="p">.</span><span class="na">honk</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">car1</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Parent class</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">speak</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I AM AN ANIMALIO!!!!!!!!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Subclass 1</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Turtle</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">breed</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Turtle</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="n">String</span> <span class="n">breed</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">breed</span> <span class="o">=</span> <span class="n">breed</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">speak</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Turtle Noises Commence&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I nomp lettuce.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Subclass 2</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">isIndoor</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Cat</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">isIndoor</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">isIndoor</span> <span class="o">=</span> <span class="n">isIndoor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">speak</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Meow!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">scratch</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I am scratching the furniture.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Tester method</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AnimalTester</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Animal</span> <span class="n">animal1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Turtle</span><span class="p">(</span><span class="s">&quot;Shellby&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&quot;Russian Tortoise&quot;</span><span class="p">);</span>
+        <span class="n">Animal</span> <span class="n">animal2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cat</span><span class="p">(</span><span class="s">&quot;Whiskers&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+        <span class="n">animal1</span><span class="p">.</span><span class="na">speak</span><span class="p">();</span>
+        <span class="p">((</span><span class="n">Turtle</span><span class="p">)</span> <span class="n">animal1</span><span class="p">).</span><span class="na">eat</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">animal1</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+
+        <span class="n">animal2</span><span class="p">.</span><span class="na">speak</span><span class="p">();</span>
+        <span class="p">((</span><span class="n">Cat</span><span class="p">)</span> <span class="n">animal2</span><span class="p">).</span><span class="na">scratch</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">animal2</span><span class="p">.</span><span class="na">age</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">AnimalTester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Turtle Noises Commence
+I nomp lettuce.
+Shellby
+Meow!
+I am scratching the furniture.
+2
 </pre>
 </div>
 </div>
