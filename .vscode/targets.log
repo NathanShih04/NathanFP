@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Apr 27 10:03:27 2023
+# Make data base, printed on Fri Apr 28 09:55:52 2023
 
 # Variables
 
@@ -61,7 +61,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-6ae117d7-1ab2-4916-965a-c91d34b3b7a7.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-8ca35abb-559e-459d-bac4-9db30839e68f.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -336,6 +336,6 @@ convert: .FORCE
 # strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
 # Load=46/8192=1%, Rehash=0, Collisions=1/72=1%
-# Finished Make data base on Thu Apr 27 10:03:27 2023
+# Finished Make data base on Fri Apr 28 09:55:52 2023
 
  
