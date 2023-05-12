@@ -132,7 +132,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// 2022 #1 A</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// 2022 #1 Part A</span>
 <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getScore</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -151,7 +151,7 @@ window.onload = wrap_img;
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
-
+    
     <span class="k">if</span><span class="p">(</span><span class="n">isBonus</span><span class="p">())</span>
         <span class="n">score</span> <span class="o">*=</span> <span class="mi">3</span><span class="p">;</span>
 
@@ -195,25 +195,25 @@ window.onload = wrap_img;
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">CombinedTable</span>
 <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">SingleTable</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">SingleTable</span> <span class="n">table1</span><span class="p">,</span> <span class="n">table2</span><span class="p">;</span>
 
-    <span class="kd">public</span> <span class="nf">CombinedTable</span><span class="p">(</span><span class="n">SingleTable</span> <span class="n">t1</span><span class="p">,</span> <span class="n">SingleTable</span> <span class="n">t2</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="nf">CombinedTable</span><span class="p">(</span><span class="n">SingleTable</span> <span class="n">table1</span><span class="p">,</span> <span class="n">SingleTable</span> <span class="n">table2</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">t1</span> <span class="o">=</span> <span class="n">t1</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">t2</span> <span class="o">=</span> <span class="n">t2</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">table1</span> <span class="o">=</span> <span class="n">table1</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">table2</span> <span class="o">=</span> <span class="n">table2</span><span class="p">;</span>
     <span class="p">}</span>
         
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">canSeat</span><span class="p">(</span><span class="kt">int</span> <span class="n">people</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">seats</span> <span class="o">=</span> <span class="n">t1</span><span class="p">.</span><span class="na">getNumSeats</span><span class="p">()</span> <span class="o">+</span> <span class="n">t2</span><span class="p">.</span><span class="na">getNumSeats</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">seats</span> <span class="o">=</span> <span class="n">table1</span><span class="p">.</span><span class="na">getNumSeats</span><span class="p">()</span> <span class="o">+</span> <span class="n">table2</span><span class="p">.</span><span class="na">getNumSeats</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span>
         <span class="k">return</span> <span class="n">seats</span> <span class="o">&lt;=</span> <span class="n">people</span><span class="p">;</span>
     <span class="p">}</span>
         
     <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getDesirability</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="kt">double</span> <span class="n">averageView</span> <span class="o">=</span> <span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="na">getViewQuality</span><span class="p">()</span> <span class="o">+</span> <span class="n">t2</span><span class="p">.</span><span class="na">getViewQuality</span><span class="p">())</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">averageView</span> <span class="o">=</span> <span class="p">(</span><span class="n">table1</span><span class="p">.</span><span class="na">getViewQuality</span><span class="p">()</span> <span class="o">+</span> <span class="n">table2</span><span class="p">.</span><span class="na">getViewQuality</span><span class="p">())</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 
-        <span class="k">if</span><span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="na">getHeight</span><span class="p">()</span> <span class="o">==</span> <span class="n">t2</span><span class="p">.</span><span class="na">getHeight</span><span class="p">())</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">table1</span><span class="p">.</span><span class="na">getHeight</span><span class="p">()</span> <span class="o">==</span> <span class="n">table2</span><span class="p">.</span><span class="na">getHeight</span><span class="p">())</span>
             <span class="k">return</span> <span class="n">averageView</span><span class="p">;</span>
         <span class="k">else</span>
             <span class="k">return</span> <span class="n">averageView</span> <span class="o">-</span> <span class="mi">10</span><span class="p">;</span>
