@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Apr 28 09:55:52 2023
+# Make data base, printed on Fri May 12 10:12:11 2023
 
 # Variables
 
@@ -37,7 +37,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","osLocale":"en","availableLanguages":{}}
 # environment
-_ = /home/nathanshih04/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/node
+_ = /home/nathanshih04/.vscode-server/bin/6a995c4f4cc2ced6e3237749973982e751cb0bf9/node
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # 'override' directive
@@ -51,7 +51,7 @@ VSCODE_CWD = /mnt/c/Downloaded Apps/Coding Apps/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/nathanshih04/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/bin/remote-cli:/home/nathanshih04/.rvm/gems/ruby-2.7.7/bin:/home/nathanshih04/.rvm/gems/ruby-2.7.7@global/bin:/home/nathanshih04/.rvm/rubies/ruby-2.7.7/bin:/home/nathanshih04/.local/bin:/home/nathanshih04/gems/bin:/home/nathanshih04/anaconda3/bin:/home/nathanshih04/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Natha/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Natha/AppData/Local/GitHubDesktop/bin:/mnt/c/Downloaded Apps/Coding Apps/Microsoft VS Code/bin:/snap/bin:/home/nathanshih04/.rvm/bin:/home/nathanshih04/.rvm/bin
+PATH = /home/nathanshih04/.vscode-server/bin/6a995c4f4cc2ced6e3237749973982e751cb0bf9/bin/remote-cli:/home/nathanshih04/.rvm/gems/ruby-2.7.7/bin:/home/nathanshih04/.rvm/gems/ruby-2.7.7@global/bin:/home/nathanshih04/.rvm/rubies/ruby-2.7.7/bin:/home/nathanshih04/.local/bin:/home/nathanshih04/gems/bin:/home/nathanshih04/anaconda3/bin:/home/nathanshih04/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Natha/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Natha/AppData/Local/GitHubDesktop/bin:/mnt/c/Downloaded Apps/Coding Apps/Microsoft VS Code/bin:/snap/bin:/home/nathanshih04/.rvm/bin:/home/nathanshih04/.rvm/bin
 # environment
 rvm_stored_umask = 0022
 # environment
@@ -61,7 +61,7 @@ CONDA_PREFIX = /home/nathanshih04/anaconda3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-8ca35abb-559e-459d-bac4-9db30839e68f.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-4e3cb80d-814b-40e2-a15b-a250802a453f.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -131,7 +131,7 @@ rvm_version = 1.29.12-next (master)
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Natha/.vscode/extensions/ms-vscode-remote.remote-wsl-0.77.0
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Natha/.vscode/extensions/ms-vscode-remote.remote-wsl-0.78.4
 # default
 MAKE_COMMAND := make
 # default
@@ -278,11 +278,11 @@ quick-build: .FORCE
 #  recipe to execute (from 'Makefile', line 23):
 	docker-compose stop || true;
 	docker build -t fastai/fastpages-jekyll -f _action_files/fastpages-jekyll.Dockerfile .
- 
 	docker-compose build 
 
 restart-jekyll: .FORCE
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 50):
@@ -336,6 +336,6 @@ convert: .FORCE
 # strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
 # Load=46/8192=1%, Rehash=0, Collisions=1/72=1%
-# Finished Make data base on Fri Apr 28 09:55:52 2023
+# Finished Make data base on Fri May 12 10:12:11 2023
 
  
